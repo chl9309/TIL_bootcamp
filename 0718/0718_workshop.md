@@ -124,6 +124,8 @@ AI개발, 데이터 분석, 웹프로그래밍, 업무 자동화 등 활용 분�
 - 코드를 '어떻게 작성할지'에 대한 가이드라인
 - 파이썬에서 제안하는 스타일 가이드 (강의에서 사용)
 	- [PEP8](https://www.python.org/dev/peps/pep-0008)
-	- google
+	- [google](https://google.github.io/styleguide/pyguide.html)
+	
+
 
 
