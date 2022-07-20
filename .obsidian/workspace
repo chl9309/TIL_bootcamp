@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "c0d64badf391cbd1",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c5ca2e650d9565b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "0720/0720_homework.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e6e115ceef8ae113",
+    "type": "split",
+    "children": [
+      {
+        "id": "7372f935ab63b86b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2923e7ab603b1409",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e5e2e237a8b2a792",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bf821782c7707c1b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ed7aaee8fc6884ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6d4d65a28783f4c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5f36582a420bc52",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0720/0720_homework.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f33dd064a51b6771",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0720/0720_homework.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ce592dec359d58eb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "abc0e20f256e5985",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0720/0720_homework.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "3c5ca2e650d9565b",
+  "lastOpenFiles": [
+    "0720/0720_workshop.md",
+    "0720/0720_homework.md"
+  ]
+}
