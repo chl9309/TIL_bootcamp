@@ -19,3 +19,19 @@ while True:
     money = int(input('금액을 넣어주세요.(그만 넣으시려면 0을 입력하세요.) : '))
 
     # 여기부터 코드를 작성하세요.
+
+    if money > 0:
+        budget += money
+        print(f'현재 누적 금액은 {budget}')
+        break
+
+    else:
+
+
+        if budget >= min(costs):
+            pass
+
+        else:
+            pass
+
+

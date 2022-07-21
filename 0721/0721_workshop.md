@@ -77,9 +77,10 @@ def dict_list_sum(x):
     
     sum = 0
     
-    for i in range(len(x)):
-        sum += x.value(age)
-    
+    #for i in range(len(x)):
+    for i in x:
+    #    sum += x.value(age)
+        sum += x('age')
     return sum
 
 
