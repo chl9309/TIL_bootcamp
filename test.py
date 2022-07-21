@@ -1,18 +1,7 @@
-def get_middle_char(x):
+num = int(input())
+div = []
+for i in range(num):
+    
+    div += list(i) if num % i == 0 else
 
-    if int(len(x)) % 2:
-        
-        y = int(len(x)) // 2
-        list(x)
-        return x[y]
-        
-    else:
-        
-        y = int(len(x)) / 2
-        list(x)
-        return x[y]
-
-
-get_middle_char('ssafy') # => a
-
-get_middle_char('coding') # => di
+print(div)
