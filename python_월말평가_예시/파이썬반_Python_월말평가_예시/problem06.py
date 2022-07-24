@@ -1,6 +1,21 @@
+import re
+from tkinter import Y
+
+
 def is_id_valid(user_data):
     pass
     # 여기에 코드를 작성합니다.
+    result = False
+    
+
+    x = user_data['id']
+   
+
+    if '0' <= x[-1] <= '9':
+        result = True
+
+    return result
+
 
 
 # 아래의 코드는 수정하지 않습니다.

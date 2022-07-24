@@ -1,6 +1,29 @@
+import re
+
+
 def turn(temperatures):
     pass
     # 여기에 코드를 작성합니다.
+    x = []
+    y = []
+    z = []
+    for i in range(len(temperatures)):
+        
+        x = temperatures[i]
+        
+        if int(x[0]) >= int(x[1]):
+            
+            y.append(x[0])
+            z.append(x[1])
+        else:
+            y.append(x[1])
+            z.append(x[0])
+
+    result = {'maximum' : y , 'minimum' : z}
+    
+    return result    
+
+    
 
 
 # 아래의 코드는 수정하지 않습니다.

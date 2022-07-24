@@ -1,7 +1,15 @@
 def max_score(scores):
     pass
     # 여기에 코드를 작성합니다.
+    x = 0
 
+    for i in range(len(scores)):
+        
+        if x < scores[i]:
+            
+            x = scores[i]
+
+    return x
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':

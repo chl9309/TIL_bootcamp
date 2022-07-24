@@ -2,6 +2,13 @@ def menu_count(restorant):
     pass
     # 여기에 코드를 작성합니다.
     
+    x = restorant.get("menus")
+    y = 0
+    
+    
+    
+    return len(x)
+
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
