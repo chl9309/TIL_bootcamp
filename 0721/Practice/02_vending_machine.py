@@ -1,3 +1,6 @@
+from codecs import mbcs_encode
+
+
 print('=================================')
 print('         Vending Machine         ')
 print('=================================')
@@ -19,19 +22,40 @@ while True:
     money = int(input('금액을 넣어주세요.(그만 넣으시려면 0을 입력하세요.) : '))
 
     # 여기부터 코드를 작성하세요.
+    
+    
     while True:
         if money > 0:
             budget += money
             print(f'현재 누적 금액은 {budget}')
-            
-
+            continue
+        elif money < 0:
+            print('금액은 1원 이상 넣어주세요.')
         else:
-
-
-            if budget >= min(costs):
-                pass
-
-            else:
-                pass
+            break
+    
+    haveorder = []
+    if budget >= min(costs):
+        print(f'{budget}원으로 구매 가능한 메뉴가 없습니다.')
+    
+    else:
+        print(f'{budget}원으로 구매 가능한 메뉴는 다음과 같습니다.')
+        for i in range(len(menus)):
+            if costs[i] < budget:
+                haveorder += i
+                print(f'{i}. {menus[i]} {costs[i]}원')
+    
+    while True:
+        choice = int(input('구매하실 메뉴의 번호를 입력하세요. : '))
+        
+        if choice in haveorder:
+            
+            break
+        else:
+            print('구매할 수 없는 메뉴입니다.')
+    print(f'{menus[choice]}를 구매하셨습니다')
+    lastmoney = budget - costs[choice]
+    print(f'거스름돈은 {lastmoney}원입니다. 감사합니다.')
+    break
 
 
