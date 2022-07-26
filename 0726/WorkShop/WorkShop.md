@@ -34,8 +34,21 @@ duplicated_letters('banana') # => ['a', 'n']
 > 작동이 안되므로 수정 필요
 > 이 알고리즘으론 중복이 3개 이상이면 그 중복 횟수만큼 출력을 함
 
+-----
+```python
+def duplicated_letters(word):
+    result = []
+    # wjscp eksdj tnsghl
+    # char -> a, p, p, l, e
+    for char in word:
+        #apple에 a라는 알파벳이 두개 이상이 있다면 중복되어나온 단어를 모아둘 result에
+        #해당 알파벳 추가하기
+        if word.count(char) >= 2:
+            result.appedn(char)
+    return result
 
-
+print(duplicated_letters('apple')) # => ['p']
+print(duplicated_letters('banana')) # => ['a', 'n']
 
 ### 소대소대
 문자열을 전달 받아 해당 문자열을 소문자와 대문자가 번갈아 나타나도록 변환하여 반환하는 low_and_up 함수를 작성하시오. 이때, 전달 받는 문자열은 알파벳으로만 구성된다.
