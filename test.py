@@ -111,7 +111,7 @@ def lonely(data):
 
     result = []
     
-    i= 0
+    i= 1
 
     while i < len(data):
 

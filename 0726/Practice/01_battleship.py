@@ -8,7 +8,18 @@ print("================================")
 # 필요에 따라 추가적으로 함수를 만들어 자유롭게 활용할 수 있습니다.
 # 각자의 해역에 배를 위치시키는 함수
 def set_ship(index, sea):
-    pass
+    
+    
+    
+    if 0 < index <14:
+
+        sea[index : index + 2] = 1
+
+        player_ship = True
+
+
+    else:
+        print('-----해당 위치에는 배를 둘 수 없습니다.-----')
 
 
 player_sea = [0] * 15  # 플레이어의 해역
@@ -21,7 +32,20 @@ round = 1  # 게임 라운드
 
 # 1. 게임 준비
 while True:
-    pass
+    
+    player_index = int(input('배를 위치시킬 시작점을 고르세요:'))
+    computer_index = random(0,14)
+    player_ship = False
+    
+    set_ship(player_index ,player_sea)
+
+    set_ship(computer_index ,computer_sea)
+
+
+    if player_ship == True:
+
+        break
+
     # 1-1) 플레이어의 배 시작 위치 고르기
 
     # 1-2) 범위를 벗어난 시작점을 고른 경우
