@@ -39,11 +39,11 @@ def count_blood(blood_list):
     blood = list(set(blood_list))
     human_count = []
 
-    for i in blood:
+    for i in range(len(blood)):
 
         human_count += blood_list.count(blood[i])
 
-    for j in blood:
+    for j in reange(len(blood)):
 
         result += {blood[j] : human_count[j]}
 
