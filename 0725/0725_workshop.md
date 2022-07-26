@@ -77,3 +77,15 @@ def count_blood(type):
     return result
 
 ```
+
+
+```python
+
+def count_blood(type):
+    result = {}
+
+    for blood in type:
+        result[blood] = result.get(blood, 0) + 1
+    return result
+
+```
