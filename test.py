@@ -106,32 +106,65 @@
 #print(low_and_up('banana')) # => bAnAnA
 
 
+#
+#def lonely(data):
+#
+#    result = []
+#    
+#    i= 1
+#
+#    while i < len(data):
+#
+#        if i == 0:
+#            
+#            result.append(data[i])
+#
+#        else:
+#            
+#            if data[i] == result[i-1]:
+#
+#                pass
+#            else:
+#                result.append(data[i])
+#
+#        i += 1
+#
+#    return result
+#
+#
+#
+#lonely([1, 1, 3, 3, 0, 1, 1]) # => [1, 3, 0, 1]
+#lonely([4, 4, 4, 3, 3]) # => [4, 3]
 
-def lonely(data):
 
-    result = []
-    
-    i= 1
 
-    while i < len(data):
+def salt(density , gram):
 
-        if i == 0:
-            
-            result.append(data[i])
-
-        else:
-            
-            if data[i] == result[i-1]:
-
-                pass
-            else:
-                result.append(data[i])
-
-        i += 1
+    result = density * gram / 100
 
     return result
+saltlist = []
+saltwaterlist = []
+i =0
+while i<5:
+
+    x = input()
+
+    if x == 'Done':
+        break
+    
+    den , gr = int(x[: x.split('%')]), int(x[x.find(' ') + 1 : x.find('g')])
+
+    saltlist.append(salt(den , gr))
+    saltwaterlist.append(gr)
+
+salt_result = sum(saltlist)
+saltwater_result = sum(saltwaterlist)
+
+print(f'{salt_result},{saltwater_result}')
 
 
 
-lonely([1, 1, 3, 3, 0, 1, 1]) # => [1, 3, 0, 1]
-lonely([4, 4, 4, 3, 3]) # => [4, 3]
+
+
+    
