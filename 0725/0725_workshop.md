@@ -57,5 +57,23 @@ count_blood([
 ]) # => {'A': 3, 'B': 3, 'O': 3, 'AB': 3}
 ```
 
+------
+
+교수님 코드
 
 
+```python
+def count_blood(type):
+    result = {}
+
+    for blood in type:
+
+        if result.get(boold):
+            result[blood] += 1
+
+        else
+            result(blood) = 1
+
+    return result
+
+```
