@@ -45,10 +45,12 @@ def duplicated_letters(word):
         #해당 알파벳 추가하기
         if word.count(char) >= 2:
             result.appedn(char)
+
     return result
 
 print(duplicated_letters('apple')) # => ['p']
 print(duplicated_letters('banana')) # => ['a', 'n']
+```
 
 ### 소대소대
 문자열을 전달 받아 해당 문자열을 소문자와 대문자가 번갈아 나타나도록 변환하여 반환하는 low_and_up 함수를 작성하시오. 이때, 전달 받는 문자열은 알파벳으로만 구성된다.
@@ -111,3 +113,25 @@ def lonely(data):
 lonely([1, 1, 3, 3, 0, 1, 1]) # => [1, 3, 0, 1]
 lonely([4, 4, 4, 3, 3]) # => [4, 3]
 ```
+
+
+-----
+
+```python
+
+def lonely(numbers):
+    result = []
+    for num in numbers:
+        if not result: #result가 비었으면
+            result.append(num)
+        else:
+            if result[-1] != num:
+                result.append(num)
+    return result
+
+lonely([1, 1, 3, 3, 0, 1, 1]) # => [1, 3, 0, 1]
+lonely([4, 4, 4, 3, 3])        # => [4, 3]
+
+```
+
+> 그리고 간결하게 개조하니 내 윗코드랑 비슷하게 나왔다.
