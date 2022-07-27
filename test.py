@@ -166,6 +166,9 @@
 #
 
 
+from ast import Str
+
+
 class Doggy:
 
     birth_of_dog = 0
@@ -185,3 +188,5 @@ class Doggy:
 Doggy.get_status()
         
 
+
+bool
