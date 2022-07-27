@@ -138,33 +138,50 @@
 
 
 
-def salt(density , gram):
+#def salt(density , gram):
+#
+#    result = density * gram / 100
+#
+#    return result
+#saltlist = []
+#saltwaterlist = []
+#i =0
+#while i<5:
+#
+#    x = input()
+#
+#    if x == 'Done':
+#        break
+#    
+#    den , gr = int(x[: x.split('%')]), int(x[x.find(' ') + 1 : x.find('g')])
+#
+#    saltlist.append(salt(den , gr))
+#    saltwaterlist.append(gr)
+#
+#salt_result = sum(saltlist)
+#saltwater_result = sum(saltwaterlist)
+#
+#print(f'{salt_result},{saltwater_result}')
+#
+#
 
-    result = density * gram / 100
 
-    return result
-saltlist = []
-saltwaterlist = []
-i =0
-while i<5:
+class Doggy:
 
-    x = input()
-
-    if x == 'Done':
-        break
+    birth_of_dog = 0
+    num_of_dog = 0    
     
-    den , gr = int(x[: x.split('%')]), int(x[x.find(' ') + 1 : x.find('g')])
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
 
-    saltlist.append(salt(den , gr))
-    saltwaterlist.append(gr)
+    def bark():
+        print('bow! wow!')
 
-salt_result = sum(saltlist)
-saltwater_result = sum(saltwaterlist)
-
-print(f'{salt_result},{saltwater_result}')
-
-
+    def get_status():
+        print(Doggy.birth_of_dog, Doggy.num_of_dog)
 
 
+Doggy.get_status()
+        
 
-    
