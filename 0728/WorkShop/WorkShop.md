@@ -36,3 +36,32 @@ True
 12
 True
 ```
+
+
+
+```python
+class Rectangle:
+    
+    def __init__(self, p1, p2):
+
+        self.p1 , self.p2 = p1 , p2
+        self.width = abs(p1.x - p2.x) 
+        self.high = abs(p1.y - p2.y)
+ 
+    def get_area(self):
+
+        return self.width * self.high
+
+    def get_perimeter(self):
+
+        return 2 * (self.width + self.high)
+
+    def is_square(self):
+
+        isthis = False
+        if self.width == self.high:
+            isthis = True
+
+        return isthis
+
+```
