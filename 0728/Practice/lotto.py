@@ -52,8 +52,8 @@ class Lotto:
 
         for i in range(len(self.number_lines)):
             same_main_counts, is_bonus = self.get_same_info(main_numbers, bonus_number, self.number_lines[i])
-            ranking = self.get_ranking(main_numbers, is_bonus)
-        
+            ranking = self.get_ranking(same_main_counts, is_bonus)
+            print(ranking)
             if ranking == 1:
                 print_ranking = '1등 당첨!'
             elif ranking == 2:
