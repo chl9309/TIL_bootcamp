@@ -40,6 +40,13 @@ True
 
 
 ```python
+class Point:
+
+    def __init__(self, x, y):
+
+        self.x , self.y = x , y
+
+
 class Rectangle:
     
     def __init__(self, p1, p2):
