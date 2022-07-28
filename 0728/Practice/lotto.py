@@ -109,6 +109,8 @@ class Lotto:
     @staticmethod
     def get_same_info(main_numbers, bonus_number, line):
         
+        ## 교수님은 set 활용하여 교집합 연산으로 맞은 갯수를 찾음
+
         same_main_counts = 0
         is_bonus = False
         for i in range(len(main_numbers)):
