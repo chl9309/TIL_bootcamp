@@ -192,44 +192,95 @@
 #bool
 
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
+#class Animal:
+#    def __init__(self, name):
+#        self.name = name
+#    
+#    def walk(self):
+#        print(f'{self.name}! 걷는다!')
+#    
+#    def eat(self):
+#        print(f'{self.name}! 먹는다!')
+#
+#
+#
+#class Dog(Animal):
+#
+#    def __init__(self, name):
+#        super().__init__(name)
+#
+#    def run(self):
+#        print(f'{self.name}! 걷는다!')
+#    
+#    def brak(self):
+#        print(f'{self.name}! 짖는다!')
+#
+#
+#class Bird(Animal):
+#    
+#    def __init__(self, name):
+#        super().__init__(name)
+#
+#    def fly(self):
+#        print(f'{self.name}! 푸드덕!')
+#
+#
+#dog = Dog('꼽이')
+#dog.run() # 꼽이! 달린다!
+#dog.brak() # 꼽이! 짖는다!
+#
+#bird = Bird('구구')
+#bird.walk() # 구구! 걷는다!
+#bird.eat() # 구구! 먹는다!
+#bird.fly() # 구구! 푸드덕! 
+
+
+
+
+class Point:
+
+    def __init__(self, x, y):
+
+        self.x , self.y = x , y
+
+        
+
+
+class Rectangle:
     
-    def walk(self):
-        print(f'{self.name}! 걷는다!')
-    
-    def eat(self):
-        print(f'{self.name}! 먹는다!')
+    def __init__(self, p1, p2):
+
+        self.p1 , self.p2 = p1 , p2
+        self.width = abs(p1.x - p2.x) 
+        self.high = abs(p1.y - p2.y)
+        #print(type(p1))
+    def get_area(self):
+
+        return self.width * self.high
+
+    def get_perimeter(self):
+
+        return 2 * (self.width + self.high)
+
+    def is_square(self):
+
+        isthis = False
+        if self.width == self.high:
+            isthis = True
+
+        return isthis
 
 
+p1 = Point(1, 3)
+p2 = Point(3, 1)
+r1 = Rectangle(p1, p2)
+print(r1.get_area())
+print(r1.get_perimeter())
+print(r1.is_square())
 
-class Dog(Animal):
-
-    def __init__(self, name):
-        super().__init__(name)
-
-    def run(self):
-        print(f'{self.name}! 걷는다!')
-    
-    def brak(self):
-        print(f'{self.name}! 짖는다!')
-
-
-class Bird(Animal):
-    
-    def __init__(self, name):
-        super().__init__(name)
-
-    def fly(self):
-        print(f'{self.name}! 푸드덕!')
-
-
-dog = Dog('꼽이')
-dog.run() # 꼽이! 달린다!
-dog.brak() # 꼽이! 짖는다!
-
-bird = Bird('구구')
-bird.walk() # 구구! 걷는다!
-bird.eat() # 구구! 먹는다!
-bird.fly() # 구구! 푸드덕! 
+p3 = Point(3, 7)
+p4 = Point(6, 4)
+r2 = Rectangle(p3, p4)
+print(r2.get_area())
+print(r2.get_perimeter())
+print(r2.is_square())
