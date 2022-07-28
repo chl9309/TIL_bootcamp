@@ -59,8 +59,6 @@ class Rectangle:
         ### self.width = abs(self.p1.x - self.p2.x)
         ### self.height = abs(self.p1.y) - self.p2.y) 
 
-
-
     def get_area(self):
 
         return self.width * self.high
