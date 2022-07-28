@@ -1,5 +1,5 @@
 # 여기에 필요한 모듈을 추가합니다.
-
+import random
 
 class Lotto:
     # 2-2. 생성자 작성
@@ -9,7 +9,16 @@ class Lotto:
     # 2-3. n 줄의 로또 번호를 생성하는 인스턴스 메서드
     def generate_lines(self, n):
         pass
+        line_nubers = []
+        for i in range(n):
+            lotto_numbers = list(random.sample(range(1,46), 6))
+            lotto_numbers.sort
+            line_nubers.append(lotto_numbers)
 
+        line_nubers = [sorted(list(random.sample(range(1,46), 6))) for _ in range(n)]
+        # [표현식] => [num for num i in range(10)]
+        # a = [0,1,2,3,4,5,6,7,8,9]
+        return line_nubers
     # 3-2. 회차, 추첨일, 로또 번호 정보를 출력하는 인스턴스 메서드
     def print_number_lines(self, draw_number):
         pass

@@ -166,27 +166,70 @@
 #
 
 
-from ast import Str
+#from ast import Str
+#
+#
+#class Doggy:
+#
+#    birth_of_dog = 0
+#    num_of_dog = 0    
+#    
+#    def __init__(self, name, breed):
+#        self.name = name
+#        self.breed = breed
+#
+#    def bark():
+#        print('bow! wow!')
+#
+#    def get_status():
+#        print(Doggy.birth_of_dog, Doggy.num_of_dog)
+#
+#
+#Doggy.get_status()
+#        
+#
+#
+#bool
 
 
-class Doggy:
-
-    birth_of_dog = 0
-    num_of_dog = 0    
-    
-    def __init__(self, name, breed):
+class Animal:
+    def __init__(self, name):
         self.name = name
-        self.breed = breed
-
-    def bark():
-        print('bow! wow!')
-
-    def get_status():
-        print(Doggy.birth_of_dog, Doggy.num_of_dog)
-
-
-Doggy.get_status()
-        
+    
+    def walk(self):
+        print(f'{self.name}! 걷는다!')
+    
+    def eat(self):
+        print(f'{self.name}! 먹는다!')
 
 
-bool
+
+class Dog(Animal):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+    def run(self):
+        print(f'{self.name}! 걷는다!')
+    
+    def brak(self):
+        print(f'{self.name}! 짖는다!')
+
+
+class Bird(Animal):
+    
+    def __init__(self, name):
+        super().__init__(name)
+
+    def fly(self):
+        print(f'{self.name}! 푸드덕!')
+
+
+dog = Dog('꼽이')
+dog.run() # 꼽이! 달린다!
+dog.brak() # 꼽이! 짖는다!
+
+bird = Bird('구구')
+bird.walk() # 구구! 걷는다!
+bird.eat() # 구구! 먹는다!
+bird.fly() # 구구! 푸드덕! 

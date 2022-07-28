@@ -19,7 +19,20 @@ class Circle:
     
     def center(self):
         return (self.x, self.y)
+
+
+test = Circle(3, 2, 4)
+print(test.area())
+print(test.circumference())
+
 ```
+
+
+
+
+
+
+
 
 ### Dog과 Bird는 Animal이다
 다음과 같이 Animal 클래스가 주어질 때, 해당 클래스를 상속 받아 아래의 보기와 같이 동작하는 Dog 클래스와 Bird 클래스를 작성하시오.
@@ -47,6 +60,32 @@ bird.eat() # 구구! 먹는다!
 bird.fly() # 구구! 푸드덕! 
 ```
 
+```python
+class Dog(Animal):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+    def run(self):
+        print(f'{self.name}! 걷는다!')
+    
+    def brak(self):
+        print(f'{self.name}! 짖는다!')
+
+
+class Bird(Animal):
+    
+    def __init__(self, name):
+        super().__init__(name)
+
+    def fly(self):
+        print(f'{self.name}! 푸드덕!')
+
+
+```
+
+
+
 ### Module Import
 ```python
 # fibo.py
@@ -60,7 +99,7 @@ def fibo_recursion(n):
 위와 같은 코드가 같은 폴더 안의 fibo.py 파일에 작성되어 있을 때, 아래와 같은 형태로 함수를 실행 할 수 있도록 하는 import 문을 빈칸 (a), (b), (c)를 채워 넣어 완성하시오.
 
 ```python
-from __(a)__ import __(b)__ as __(c)__
+from fibo.py import fibo_recusion as recursion
 
 
 recursion(4)
