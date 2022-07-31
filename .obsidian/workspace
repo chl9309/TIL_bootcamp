@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "youtube_book/python_youtube_book.md",
+            "file": "youtube_book/python_youtube_book_03.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "youtube_book/python_youtube_book.md",
+                "file": "youtube_book/python_youtube_book_03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "youtube_book/python_youtube_book.md",
+                "file": "youtube_book/python_youtube_book_03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "youtube_book/python_youtube_book.md"
+                "file": "youtube_book/python_youtube_book_03.md"
               }
             }
           }
@@ -131,6 +131,8 @@
   },
   "active": "3c5ca2e650d9565b",
   "lastOpenFiles": [
+    "youtube_book/python_youtube_book_01.md",
+    "youtube_book/python_youtube_book_03.md",
     "youtube_book/0727_OOP.md",
     "0720/0720_homework.md",
     "0720/0720_workshop.md"
