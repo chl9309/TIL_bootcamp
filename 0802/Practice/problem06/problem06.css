@@ -12,7 +12,11 @@
 
 /* 아래에 코드를 작성합니다. */
 /* 1. h4 태그의 글자 크기는 20px, 굵기는 bold, 폰트는 Arial 입니다.  */
-
+.h4 {
+  text-size-adjust: 20px;
+  font-weight: bold;
+  font: Arial;
+}
 /* 2. p 태그의 폰트는 Arial 입니다. */
 
 /* 3. 카드의 너비는 700px, border 굵기는 2px, 스타일은 dashed, border의 색은 black 입니다. */
