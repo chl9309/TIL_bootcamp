@@ -12,7 +12,7 @@ body {
   /* 2-1. header에 알맞은 position을 작성하시오. */
   position: relative;
   /* 2-2. header안의 컨텐츠들을 중앙정렬하시오. */ 
- 
+
   text-align: center;
 
 
@@ -29,11 +29,11 @@ body {
 
 .section-style {
   /* 4-1. section에 알맞은 position을 작성하시오. */
-
+  position: absolute;
   /* 4-2. section과 aside가 나란히 올 수 있도록 변경하시오. */
-
+  right: 50%;
   /* 4-3. section 내부의 컨텐츠가 상단에 위치할 수 있도록 변경하시오. */
-
+  vertical-align: top;
   /* 아래는 자유롭게 수정하시오. */
   width: 35%; 
   margin-left: 15%;
@@ -41,7 +41,7 @@ body {
 
 .article-style {
   /* 5. article에 알맞은 position을 작성하시오. */
-
+  position: relative;
 
   /* 아래는 자유롭게 수정하시오. */
   vertical-align: top;
@@ -50,9 +50,9 @@ body {
 
 .aside-style {
   /* 6-1. aside에 알맞은 position을 작성하시오. */
-  
+  position: relative;
   /* 6-2. section과 article가 나란히 올 수 있도록 변경하시오. */
-
+  left: 50%;
   /* 6-3. aside 내부의 컨텐츠가 상단에 위치할 수 있도록 변경하시오. */
 
 
@@ -64,11 +64,11 @@ body {
 
 .footer-style {
   /* 7-1. footer에 알맞은 position을 작성하시오. */
-  
+  position: fixed;
   /* 7-2. footer가 화면 가장 아래에 있을 수 있도록 위치를 조정하시오. */
-  
+  bottom: 2%;
   /* 7-3. footer안의 컨텐츠들을 중앙정렬하시오. */
-  
+  text-align: center;
   /* 아래는 자유롭게 수정하시오. */
   width: 90%;
 }
@@ -88,12 +88,14 @@ nav a {
 /* 10. 배경 색상을 white로 변경하시오.*/
 /* 11. 배경 색상의 투명도를 80%로 변경하시오. */
 .bg-white {
-  
+  color: white;
+  opacity: 80%;
 
 }
 
 /* 12. 텍스트 색상을 grey로 변경하시오.*/
-.text-grey {
+p {
+  color: gray;
     
 }
 
@@ -104,7 +106,7 @@ nav a {
 
 /* 14. 이미지의 크기가 content에 꽉 찰 수 있도록 변경하시오.*/
 .img-width {
-    
+    width: 100%;
 }
 
 /* 15. 필요에 따라 자유롭게 스타일을 추가 작성하시오. */
