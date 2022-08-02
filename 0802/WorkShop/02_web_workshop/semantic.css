@@ -24,7 +24,7 @@ body {
   /* 3-2. nav를 컨텐츠 안에 꽉 채우시오.*/
 
   /* 3-3. nav 아래쪽에 자유롭게 마진을 생성하시오. */
-
+  margin-bottom: 5px;
 }
 
 .section-style {
@@ -66,11 +66,14 @@ body {
   /* 7-1. footer에 알맞은 position을 작성하시오. */
   position: fixed;
   /* 7-2. footer가 화면 가장 아래에 있을 수 있도록 위치를 조정하시오. */
-  bottom: 2%;
+  bottom: 0%;
   /* 7-3. footer안의 컨텐츠들을 중앙정렬하시오. */
   text-align: center;
   /* 아래는 자유롭게 수정하시오. */
   width: 90%;
+  background-color: white;
+  opacity: 50%;
+  
 }
 
 .section-aside {
@@ -80,7 +83,10 @@ body {
 /* 8. nav 태그 안에 있는 a 태그의 하이퍼링크 선을 제거하시오. */
 /* 9. a 태그 간의 좌우 간격이 존재하도록 마진을 생성하시오. */
 nav a {
-  
+  margin-left: 10px;
+  margin-right: 10px;
+
+  text-decoration: none;
 
 
 }
@@ -93,15 +99,21 @@ nav a {
 
 }
 
+.footer-style:hover{
+  opacity: 0;
+  transition: 2s;
+}
+
+
 /* 12. 텍스트 색상을 grey로 변경하시오.*/
-p {
+.text-gray {
   color: gray;
     
 }
 
 /* 13. 텍스트 색상을 brown으로 변경하시오.*/
 .text-brown {
-    
+    color: brown;
 }
 
 /* 14. 이미지의 크기가 content에 꽉 찰 수 있도록 변경하시오.*/
