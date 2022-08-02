@@ -1,6 +1,6 @@
 body {
   /* 1. body 전체에 알맞은 position을 작성하시오. */
-  
+  position: absolute;
 
   /* 아래는 자유롭게 수정하시오. */
   width: 90%;
@@ -10,8 +10,9 @@ body {
 
 .header-style {
   /* 2-1. header에 알맞은 position을 작성하시오. */
-
-  /* 2-2. header안의 컨텐츠들을 중앙정렬하시오. */
+  position: absolute;
+  /* 2-2. header안의 컨텐츠들을 중앙정렬하시오. */ 
+  left: 50%;
 
 }
 
