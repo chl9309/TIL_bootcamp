@@ -10,9 +10,11 @@ body {
 
 .header-style {
   /* 2-1. header에 알맞은 position을 작성하시오. */
-  position: absolute;
+  position: relative;
   /* 2-2. header안의 컨텐츠들을 중앙정렬하시오. */ 
-  left: 50%;
+ 
+  text-align: center;
+
 
 }
 
