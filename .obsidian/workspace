@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3c5ca2e650d9565b",
+        "id": "e8d1d1d2a3256856",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "youtube_book/python_youtube_book_03.md",
+            "file": "0802/note.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "youtube_book/python_youtube_book_03.md",
+                "file": "0802/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "youtube_book/python_youtube_book_03.md",
+                "file": "0802/note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "youtube_book/python_youtube_book_03.md"
+                "file": "0802/note.md"
               }
             }
           }
@@ -129,10 +129,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3c5ca2e650d9565b",
+  "active": "e8d1d1d2a3256856",
   "lastOpenFiles": [
-    "youtube_book/python_youtube_book_01.md",
+    "0805/note.md",
+    "youtube_book/Untitled.md",
+    "0802/note.md",
+    "0802/Practice/README.md",
+    "0804/Practice/README.pdf",
     "youtube_book/python_youtube_book_03.md",
+    "youtube_book/python_youtube_book_01.md",
     "youtube_book/0727_OOP.md",
     "0720/0720_homework.md",
     "0720/0720_workshop.md"
