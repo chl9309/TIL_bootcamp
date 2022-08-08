@@ -10,7 +10,7 @@ for test_case in range(1, T + 1):
     A = list(map(int, input().split()))
     result = 0
     big = 0
-    for i in range(3, N-1):
+    for i in range(2, N-2):
 
         if A[i] >= A[i-2]:
             if A[i] >= A[i-1]:
