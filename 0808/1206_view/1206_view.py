@@ -12,10 +12,10 @@ for test_case in range(1, T + 1):
     big = 0
     for i in range(3, N-1):
 
-        if (A[i] - A[i-2]) > 0:
-            if (A[i] - A[i-1]) > 0:
-                if (A[i] - A[i+1]) > 0:
-                    if (A[i] - A[i+2]) > 0:
+        if A[i] >= A[i-2]:
+            if A[i] >= A[i-1]:
+                if A[i] >= A[i+1]:
+                    if A[i] >= A[i+2]:
 
                         if A[i-2] < A[i-1]:
                             if A[i-1] < A[i+1]:
@@ -45,5 +45,3 @@ for test_case in range(1, T + 1):
     print(f'#{test_case} {result}')
 
 
-
-    # 값 에러 뜨므로 내일 수정예정
