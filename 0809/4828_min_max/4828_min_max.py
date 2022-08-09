@@ -17,7 +17,6 @@ for test_case in range(1, T+1):
         if a[i] > maximum:
             maximum = a[i]
 
-
     for j in range(N):
 
         if a[j] < minimum:

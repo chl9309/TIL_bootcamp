@@ -13,21 +13,32 @@ for test_case in range(1, T+1):
     charge_list = list(map(int, input().split()))
     charge_count = 0
     energy = K
-    gogo, possible = True, True
+    gogo, possible = False, False
 
     for i in range(N):
-        for j in range(M-1,0,-1):
+        gogo, possible = False, False
 
-            if i<charge_count[M]:
-                if energy > charge_list[j]-i:
-                    gogo = True
-                    break
+        for j in range(M-1, -1, -1):
+
+            if i < charge_list[M-1]:
+                if energy >= charge_list[j]-i:
+                    if i <= charge_list[j]:
+                        gogo = True
+                        break
+                    else:
+                        continue
                 else:
                     gogo = False
             else:
-                gogo
+                if energy > N-i:
+                    possible = True
+                else:
+                    gogo = False
 
-        if gogo:
+
+        if possible:
+            break
+        elif gogo:
             energy -= 1
         else:
             for k in range(M):
@@ -39,6 +50,7 @@ for test_case in range(1, T+1):
                     break
                 else:
                     possible = False
+
 
 
     if possible:

@@ -8,7 +8,7 @@ for test_case in range(1, T + 1):
 
     N = int(input())
     a = list(map(int, list(input())))
-    count = [0] * 9
+    count = [0] * 10
 
     for i in range(N):
         for j in range(1, 10):
