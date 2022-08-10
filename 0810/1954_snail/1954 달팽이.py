@@ -50,4 +50,4 @@ for test_case in range(T):
 
         cnt = N
 
-    print(f'#{test_case} \n {a}')
+    print(f'#{test_case + 1} \n {a}')
