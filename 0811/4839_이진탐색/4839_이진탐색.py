@@ -9,15 +9,18 @@ for test_case in range(T):
     cnt_a, cnt_b = 0, 0
 
     l, r = 1, P
+    c = (l + r) // 2
 
 
     while l <= r:
+
         c = (l + r) // 2
+
         if Pa > c:
-            l = c + 1
+            l = c
 
         elif Pa < c:
-            r = c - 1
+            r = c
 
         else:
             break
@@ -28,12 +31,15 @@ for test_case in range(T):
     c = (l + r) // 2
 
     while l <= r:
+        if c == Pb or c == l:
+            break
+
         c = (l + r) // 2
         if Pb > c:
-            l = c + 1
+            l = c
 
         elif Pb < c:
-            r = c - 1
+            r = c
 
         else:
             break
