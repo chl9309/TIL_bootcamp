@@ -25,7 +25,7 @@ for test_case in range(T):
         a[i], a[dmp] = a[dmp], a[i]
 
 
-    print(f'#{test_case+1} ', end='')
-    for x in range(N):
-        print(f'{a[x] }', end='')
+    print(f'#{test_case+1}', end=' ')
+    for x in range(10):
+        print(a[x], end=' ')
     print()
