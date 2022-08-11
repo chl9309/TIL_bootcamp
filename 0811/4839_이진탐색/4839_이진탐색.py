@@ -51,6 +51,6 @@ for test_case in range(T):
     elif cnt_a > cnt_b:
         result = 'B'
     else:
-        result = 0
+        result = '0'
 
     print(f'#{test_case+1} {result}')
