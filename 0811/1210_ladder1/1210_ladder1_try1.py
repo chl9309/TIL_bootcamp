@@ -2,9 +2,9 @@ import sys
 
 sys.stdin = open('input.txt')
 
-T = int(input())
-for test_case in range(T):
 
+for test_case in range(1,11):
+    T = int(input())
     a = [list(map(int, input().split())) for _ in range(100)]
     x, y = 0, 0
     result = 0
@@ -16,7 +16,7 @@ for test_case in range(T):
         else:
             continue
 
-        while y != 99:
+        while y < 99:
 
             if x != 99:
                 if a[y][x+1]:
@@ -47,4 +47,4 @@ for test_case in range(T):
             continue
 
 
-    print(f'#{test_case +1} {result}')
+    print(f'#{test_case} {result}')

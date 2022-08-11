@@ -7,6 +7,7 @@ for test_case in range(T):
 
     N = int(input())
     a = [[0] * 10 for _ in range(10)]
+
     for c_in in range(N):
         r1, c1, r2, c2, color = map(int, input().split())
 
