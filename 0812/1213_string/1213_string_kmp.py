@@ -54,4 +54,4 @@ for test_case in range(10):
     target = input()
 
     result = KMP(search, target)
-    print(result)M,./
+    #print(result)M,./
