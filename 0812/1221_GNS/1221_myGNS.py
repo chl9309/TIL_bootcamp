@@ -14,7 +14,7 @@ for test_case in range(T):
     result = [0] * l
     for i in range(l):
 
-        if target[i] =="ZRO" :
+        if target[i] =="ZRO":
             translate[i] = 0
         elif target[i] =="ONE":
             translate[i] = 1
