@@ -16,4 +16,3 @@ for test_case in range(T):
         i += 1
 
     print(f'#{test_case+1} {result}')
-
