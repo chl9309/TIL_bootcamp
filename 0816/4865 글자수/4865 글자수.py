@@ -25,5 +25,3 @@ for test_case in range(T):
 
     print(f'#{test_case} {max}')
 
-
-
