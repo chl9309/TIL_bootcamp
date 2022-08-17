@@ -11,7 +11,7 @@ for _ in range(T):
     result = 0
 
     for i in range(1, 101):
-        if result >
+        # if result >
         for j in range(100):
             for k in range(101-i):
                 b = a[j][k:k+i+1]
