@@ -18,7 +18,8 @@ def pascal(num):
 
     return p
 
-def pascal_print (num):
+
+def pascal_print(num):
 
     if num > 1:
         pascal_print(num - 1)
@@ -34,7 +35,3 @@ for test_case in range(T):
 
     print(f'#{test_case + 1}')
     pascal_print(N)
-
-
-
-
