@@ -24,7 +24,7 @@ def pascal_print(num):
     if num > 1:
         pascal_print(num - 1)
 
-    print(pascal(num))
+    print(*pascal(num))
     return
 
 
