@@ -18,14 +18,14 @@ for test_case in range(T):
 
             if puzzle[i][j] == 1:
                 cnt = 0
-                while :
-                    if puzzle[i][j+k]:
+                while j < N-K:
+                    if puzzle[i][j]:
                         cnt += 1
 
                     else:
                         if cnt == K:
                             result += 1
-                            j+
+
 
 
 
