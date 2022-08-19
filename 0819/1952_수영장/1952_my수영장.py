@@ -46,8 +46,7 @@ for test_case in range(T):
                 else:
                     tmp3 += (plan[third_try] * day)
 
-        if tmp3 <=
-
+        #if tmp3 <=
 
     print(cnt)
 
