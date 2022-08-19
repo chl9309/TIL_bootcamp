@@ -6,7 +6,6 @@ for test_case in range(10):
     N = int(input())
     field = [list(map(int, input().split())) for _ in range(N)]
     cnt = 0
-    pan = False
 
     for i in range(N):
         tmp = []

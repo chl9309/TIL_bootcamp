@@ -15,11 +15,11 @@ def field_move(field):
                         field[i][j] = 0
 
             elif field[i][j] == 2:
-
-
+                pass
 
 
 T = int(input())
+
 for test_case in range(T):
 
     field = [list(map(int, input().split())) for _ in range(100)]
