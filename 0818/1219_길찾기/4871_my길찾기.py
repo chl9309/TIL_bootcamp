@@ -7,7 +7,7 @@ for _ in range(10):
     a = list(map(int, input().split()))
     s_p, e_p = [], []
     tmp = []
-    map = [list([0] *
+    map = [list([0] )]
     for x in range(0, load_num, 2):
 
         s_p.append(a[x])
@@ -17,5 +17,4 @@ for _ in range(10):
         e_p.append(a[y])
 
     for i in range(load_num):
-
-    
+        pass
