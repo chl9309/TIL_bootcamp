@@ -30,6 +30,3 @@ for test_case in range(T):
 
     result = fire[0][1]
     print(f'#{test_case+1} {result}')
-
-
-
