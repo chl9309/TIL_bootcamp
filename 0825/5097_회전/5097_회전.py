@@ -14,3 +14,5 @@ for test_case in range(T):
 
     result = data[front]
     print(f'#{test_case+1} {result}')
+
+    #동섭's 코드 arr[M%N]
