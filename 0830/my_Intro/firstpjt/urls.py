@@ -25,4 +25,4 @@ urlpatterns = [
     path('dinner/', views.dinner),
     path('throw/', views.throw),
     path('catch/', views.catch),
-]
+    ]

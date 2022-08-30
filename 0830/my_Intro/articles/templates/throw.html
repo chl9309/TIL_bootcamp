@@ -1,0 +1,13 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+<h1> 데이터 던지는 곳 </h1>
+
+<form action="/catch/">
+    <label for="username">Name</label>
+
+    <input type="text" id="username" name="username">
+    <input type="submit">
+</form>
+{% endblock content %}
