@@ -6,7 +6,8 @@ def index(request):
     # print(dir(request))
     # print(request.user)
     # template을 return
-    return render(request, 'index.html')
+    # return render(request, 'templates/articles/index.html')
+    return render(request, 'articles/index.html')
 
 def greeting(request):
     name = 'Alice'
@@ -16,7 +17,7 @@ def greeting(request):
         'name': name,
         'foods': foods
     }
-    return render(request, 'greeting.html', context)
+    return render(request, 'articles/greeting.html', context)
 
 # 저녁메뉴 추천 view 함수 생성
 def dinner(request):
@@ -34,10 +35,10 @@ def dinner(request):
         'wallet': wallet
     }
     # dinner.html에 넘겨주기
-    return render(request, 'dinner.html', context)
+    return render(request, 'articles/dinner.html', context)
 
 def throw(request):
-    return render(request, 'throw.html')
+    return render(request, 'articles/throw.html')
 
 def catch(request):
     print(dir(request))
@@ -47,4 +48,10 @@ def catch(request):
     context = {
         'username': username
     }
-    return render(request, 'catch.html', context)
+    return render(request, 'articles/catch.html', context)
+
+def profile(request, name):
+    context = {
+        'name': name
+    }
+    return render(request, 'articles/profile.html', context)
