@@ -5,7 +5,7 @@ T = int(input())
 for test_case in range(T):
 
     N = int(input())
-    busstop = [0] * 1000
+    busstop = [0] * 1001
 
     for bus_num in range(N):
 
@@ -26,20 +26,17 @@ for test_case in range(T):
         elif bustype == 3:
 
             if A % 2:
-                for i in range(A, B):
+                for i in range(A+1, B+1):
+                    busstop[A] += 1
+                    busstop[B] += 1
+                    if A % 2:
+                        if not i % 4:
+                            busstop[i] += 1
 
-                    if A%2:
-                        if not i%4:
-                            busstop[i] +=1
-                            busstop[B] +=1
                     else:
-                        if (not A%3) and (A%10):
-                            busstop[i] +=1
+                        if (not i % 3) and (i % 10):
+                            busstop[i] += 1
 
-    #print(busstop)
     result = max(busstop)
 
-    print(f'#{test_case} {result}')
-
-
-
+    print(f'#{test_case+1} {result}')
