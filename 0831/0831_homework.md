@@ -1,15 +1,35 @@
 
-| Daily Homework |
-❖ 학습해야 할 내용
-✓ Django Model
-Model
 ## 1. Model 반영하기
+
 “Django가 Model에 생긴 변화를 DB에 반영하는 방법” 을 뜻하는 용어를 작성하시오.
+
+- migrate migration
+
 ## 2. Model 변경사항 저장하기
+
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=10)
+    content = models.TextField()
+```
+
 1. 위에서 작성한 Model의 변경사항을 저장하기 위한 명령어를 작성하시오. 
-2. 이로 인해 생성된 마이그레이션 파일에 대응되는 SQL문을 확인하기 위한 명령어와
-출력결과를 작성하시오. (app의 이름은 articles이다.)
+
+```bash
+python manage.py makemigration
+python manage.py migrate
+```
+
+2. 이로 인해 생성된 마이그레이션 파일에 대응되는 SQL문을 확인하기 위한 명령어와 출력결과를 작성하시오. (app의 이름은 articles이다.)
+
+```shell
+python manage.py shell # 기본 shell
+python manage.py shell_plus # djago_extensions 설치
+```
+
+
 ## 3. Python Shell
+
 Django에서 사용 가능한 모듈 및 메서드를 대화식 Python Shell에서 사용하려고 할 때, 
 어떤 명령어를 통해 해당 Shell을 실행할 수 있는지 작성하시오.
 
