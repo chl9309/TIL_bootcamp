@@ -21,7 +21,7 @@ def order(x):
             result = left // right
             return result
 
-    return a
+    return nord_data[x]
 
 
 for test_case in range(10):
