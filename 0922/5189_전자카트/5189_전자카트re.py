@@ -4,7 +4,7 @@ sys.stdin = open('sample_input.txt')
 
 def nPr(i, n):
 
-    if i == n:
+    if i == n and p[0] == 0:
         elec_sum = 0
         for x in range(n-1):
             elec_sum += data[p[x]][p[x+1]]
@@ -29,13 +29,10 @@ for test_case in range(T):
     N = int(input())
     data = [list(map(int, input().split())) for _ in range(N)]
 
-    stage = list(range(N))
+    stage = list(range(1, N))
     min_electric = 9999999
-    used = [0] * N
-    p = [0] * N
-    nPr(0, N)
+    used = [0] * (N-1)
+    p = [0] * (N-1)
+    nPr(0, N-1)
 
     print(f'#{test_case+1} {min_electric}')
-
-
-
