@@ -15,7 +15,7 @@ def merge(arr):
 
     l_idx = r_idx = k = 0
     while l_idx < len(left) and r_idx < len(right):
-        
+
 
 T = int(input())
 for test_case in range(T):
