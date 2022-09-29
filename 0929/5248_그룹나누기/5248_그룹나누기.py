@@ -19,7 +19,7 @@ for test_case in range(T):
             if data2[i][0] in student[j]:
 
                 for k in range(len(student)):
-                    if (data2[i][1] in student[k]) and j != k:
+                    if (data2[i][1] in student[k]) and j != k: # 자기 자신을 지목하는 엣지케이스 예방
 
                         student[j] = student[j].union(student[k])
                         student.remove(student[k])

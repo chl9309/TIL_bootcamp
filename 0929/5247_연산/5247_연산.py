@@ -1,10 +1,12 @@
 import sys
+from collections import deque
 sys.stdin = open('input.txt')
 
 
 def BFS(N, M):
+    Q = deque()
     visited[N] = 1
-    Q = [N]
+    Q.append()
     while Q:
         n = Q.pop(0)
         operator = [n+1, n-1, n*2, n-10]
