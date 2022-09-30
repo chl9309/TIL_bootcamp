@@ -5,13 +5,14 @@ T = int(input())
 for test_case in range(T):
 
     N = int(input())
-    s = []
-    e = []
-    for i in range(N):
+    data = []
+    for _ in range(N):
 
-        s_now, e_now = map(int, input().split())
-        s.append(s_now)
-        e.append(e_now)
+        data_now = list(map(int, input().split()))
+        data.append(data_now)
+
+print(data)
+
 
 
 
