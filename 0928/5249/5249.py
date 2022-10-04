@@ -9,7 +9,7 @@ for test_case in range(T):
 
     arr.sort(key=lambda x: x[2])
 
-    
+
 
 
 
