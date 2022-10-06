@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>DETAIL PAGE</h1>
+
+  <p>{{ article.pk }} 번째 글</p>
+  <hr>
+  <p>제목 : {{ article.title }} </p>
+  <p>내용 : {{ article.content }}</p>
+  <p>작성 시간 : {{aritcle.created_at}}</p>
+  <p>수정 시간 : {{aritcle.updated_at}}</p>
+  <p></p>
+  <hr>
+  <p>--댓글--</p>
+  <form action="{% url 'articles:comment_create' article.pk %}" method='POST'>
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="댓글 생성">
+    
+  </form>
+  <hr>
+  {% for comment in article.comment_set.all %}
+    <p>{{ comment.content }} - {{ comment.create_at }}</p>
+  {% endfor %}
+  <p></p>
+  <p></p>
+
+  <a href="{% url 'articles:index'%}">[BACK]</a>
+
+{% endblock content %}
+
+
+
