@@ -7,7 +7,7 @@
 ```python
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'assets',
+    BASE_DIR / 'my_pjt' / 'assets',
 ]
 ```
 
@@ -16,7 +16,7 @@ STATICFILES_DIRS = [
 폴더로 지정하고자 한다. 이 때, settings.py에 작성해야 하는 설정과 값을 모두 작성하시오.
 
 ```python
-MIDIA_ROOT = BASE_DIR / 'media'
+MIDIA_ROOT = BASE_DIR / 'media' / 'uploaded_files'
 ```
 
 ## 3. Serving files uploaded by user during development

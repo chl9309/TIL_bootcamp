@@ -15,6 +15,8 @@ M:N 관계는 ManyToManyField를 사용한다.
 두번째 인자는 related_name이 작성 되는데 두 가지 모두 필수적으로 들어가야 한다.
 
   - F : 필수적이지 않다.
+  - related_name 은 역참조 매니저 명이 충돌하는 경우에 한해서만 필수적으로 설정하여야하고, 그 외에는 선택적으로 ㅓㄹ정할 수 있다..
+  - 역참조 매니저명이 추돌하는 경우란, 모델A의 모델 B가 이미 N:1의 광계를 맺고 있다고 가정하였을때 A와 B 간의 M:N 관계도 설정되었을 때, 모델 A가 역참조 모델인 B를 관리하는 역참조 매니저 명을 별도로 설정하지 않았을 때를 의미한다. 즉 A b_set 이 N:1 과 M:N 모두에 대한 역참조 매니저가 될 때를 말한다.
 
 2. Like in templates
 아래 빈 칸 (a)와 (b)에 들어갈 코드를 각각 작성하시오.
@@ -78,7 +80,19 @@ urlpatterns = [
 다음과 같은 에러 메시지가 발생하는 이유와
 이를 해결하기 위한 방법과 코드를 작성하시오. 
 
+```python
+# accounts/forms.py
 
+from django.contrib.auth.forms import UserCreationForm
+
+
+class CustomUserCreationForm(UserCreationForm):
+
+    class Meta(UserCreationForm.Meta):
+        model = get_user_model()
+        fields = UserCreationForm.Meta.Fields
+
+```
 
 
 
