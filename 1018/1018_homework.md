@@ -32,7 +32,7 @@ class Student(models.Model):
   address = models.TextField()
 ```
 
-``` python
+```python
 class StudentSerializer():
     
 ```
