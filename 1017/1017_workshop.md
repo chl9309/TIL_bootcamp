@@ -1,6 +1,6 @@
 ## 1. Model
 
-- admin 페이지 혹은 django-seed 라이브러리를 활용하여 5개의 데이터를 생성한다.
+- admin 페이지 혹은 [django-seed](https://github.com/Brobin/django-seed) 라이브러리를 활용하여 5개의 데이터를 생성한다.
 
 
 ## 2. serializers
