@@ -22,6 +22,21 @@
       { name: 'Robert', age: 27, isMarried: false, balance: 400, },
       { name: 'Tom', age: 35, isMarried: true, balance: 500, },
     ]
+
+    users.forEach((user) => {console.log(user)})
+
+    const marriedUsers = users.filter((user) => {return user.isMarried === true})
+    console.log(marriedUsers)
+
+    const tom = users.find((user) => {return user.name === 'Tom'})
+    console.log(tom)
+
+    const newUsers = users.map((user) => {user.isAlive = true; return user})
+    console.log(newUsers)
+
+    const totalBalance = users.reduce((total, user) => total + user.balance, 0)
+    console.log(totalBalance)
+
   </script>
 </body>
 
