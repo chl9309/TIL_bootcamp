@@ -14,11 +14,16 @@
       size: 29930
     }
 
-    function fileSummary(file) {
-      console.log(`The file ${file.name}.${file.extension} is size of ${file.size} bytes.`)
-    }
+    
+    // function fileSummary(file) {
+    //   console.log(`The file ${file.name}.${file.extension} is size of ${file.size} bytes.`)
+    // }
 
-    fileSummary(savedFile)
+    // fileSummary(savedFile)
+
+    const { name, extension, size } = savedFile
+    console.log(`The file ${name}.${extension} is size of ${size} bytes.`)
+
 
     // 1-2. 아래 코드를 object destructuring을 활용해 리팩토링 하시오.
     const data = {
@@ -27,9 +32,10 @@
       email: 'my@mail.com',
     }
 
-    const username = data.username
-    const password = data.password
-    const email = data.email
+    // const username = data.username
+    // const password = data.password
+    // const email = data.email
+    const { username, password, email } = data
 
     console.log(username, password, email)
 
@@ -48,7 +54,7 @@
     // 3-1. Spread operator를 활용해 아래 코드를 리팩토링 하시오.
     const defaultColors = ['red', 'green', 'blue'];
     const favoriteColors = ['navy', 'black', 'gold', 'white']
-    const palette = defaultColors.concat(myFavoriteColors);
+    const palette = defaultColors.concat(favoriteColors);
 
     // 3-2. Spread operator를 활용해 아래 코드를 리팩토링 하시오.
     const info1 = { name: 'Tom', age: 30 }
