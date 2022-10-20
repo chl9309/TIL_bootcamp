@@ -37,10 +37,10 @@ for (const i of numbers) {
 - for ... of 문을 사용하여 배열의 각 요소에 10을 더한 요소들로 구성된 새로운 배열을 생성하시오.
 
 ```javascript
-for (const i of numbers)
+for (const i of numbers) {
     i += 10
     console.log(i)
-
+}
 ```
 
 - for ... of 문을 사용하여 배열의 각 요소들 중 홀수 요소 들로만 구성된 새로운 배열을 생성하시오.
@@ -49,7 +49,7 @@ for (const i of numbers)
 for (const i of numbers) {
     const new_numbers = []
     if (i % 2 === 1) {
-        new_nubers.append(console.log(i))
+        new_nubers.push(console.log(i))
     }
 }
 ```
