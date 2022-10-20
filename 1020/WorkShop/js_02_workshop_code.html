@@ -13,7 +13,15 @@
   <script>
     // 주어진 문자열이 회문인지 판별하는 isPalindrome 함수를 완성하시오.
     function isPalindrome(str) {
+      const noSpaceStr = str.replaceALL(' ', '')
 
+      const arr = noSpaceStr.split('')
+
+      arr.reverse()
+
+      const reversedStr = arr.join('')
+
+      return noSpaceStr === reversedStr
     }
 
     // 출력

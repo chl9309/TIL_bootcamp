@@ -41,11 +41,15 @@
 
 
     // 2. Rest operator를 활용해 아래 코드를 리팩토링 하시오.
-    function addNumbers(a, b, c, d, e) {
-      const numbers = [a, b, c, d, e];
-      return numbers.reduce((sum, number) => {
-        return sum + number
-      }, 0)
+    // function addNumbers(a, b, c, d, e) {
+    //   const numbers = [a, b, c, d, e];
+    //   return numbers.reduce((sum, number) => {
+    //     return sum + number
+    //   }, 0)
+    // }
+    
+    function addNumbers(...numbers) {
+      return numbers.reduce((sum, number) => sum + number, 0)
     }
 
     console.log(addNumbers(1, 2, 3, 4, 5))
@@ -54,12 +58,15 @@
     // 3-1. Spread operator를 활용해 아래 코드를 리팩토링 하시오.
     const defaultColors = ['red', 'green', 'blue'];
     const favoriteColors = ['navy', 'black', 'gold', 'white']
-    const palette = defaultColors.concat(favoriteColors);
+    // const palette = defaultColors.concat(favoriteColors);
+    const palette = [...defaultColors, ...favoriteColors]
 
     // 3-2. Spread operator를 활용해 아래 코드를 리팩토링 하시오.
     const info1 = { name: 'Tom', age: 30 }
     const info2 = { isMarried: true, balance: 3000 }
-    const fullInfo = Object.assign(info1, info2)
+    // const fullInfo = Object.assign(info1, info2)
+
+    const fullInfo = {...info1, ...info2}
 
     console.log(fullInfo)
   </script>
