@@ -18,6 +18,33 @@
 
   <script>
     // code here
-  </script>
+
+    const ul = document.querySelector('#day')
+
+    const sat = document.createElement('li')
+    sat.innerText = '토요일'
+
+    ul.append(sat)
+
+    const sun = document.createElement('li')
+    sun.innerText = '일요일'
+    
+    ul.prepend(sun)
+    
+    let start = document.createElement('p')
+    start.innerText = 'start'
+    ul.before(start)
+    let end = document.createElement('p')
+    end.innerText = 'end'
+    ul.after(end)
+
+    const mon = ul.children[1]
+    const tue = ul.children[2]
+    const wed = ul.children[3]
+    const thr = ul.children[4]
+    const fri = ul.children[5]
+    
+    mon.remove()
+    </script>
 </body>
 </html>
