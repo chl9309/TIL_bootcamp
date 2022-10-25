@@ -9,11 +9,32 @@
 <body>
   <h1>lorem</h1>
   <div>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos possimus quam reprehenderit temporibus? Voluptatum adipisci veritatis officia, mollitia asperiores itaque velit, cupiditate quibusdam quod tempore minima porro ipsa eum iste.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum rerum, doloribus similique culpa in inventore dolore beatae doloremque iste facilis fugit suscipit reiciendis eligendi, soluta incidunt ut quo aperiam vel.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad libero qui earum aspernatur eveniet voluptatibus hic similique adipisci? Rem numquam debitis assumenda animi cupiditate deserunt vero. Molestias officiis minus nemo!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, excepturi! Rem minima sunt alias facilis perspiciatis tenetur ullam vitae ea? Quas laboriosam provident rem sapiente dolorum consequuntur, ab accusamus similique.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus aliquam nam perferendis? Aut eos ullam perspiciatis commodi error aliquid veniam sapiente, tempora quas, aliquam labore, consequatur ea nisi neque.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime rerum ratione quisquam magnam? Molestiae labore voluptates provident et. Eos odit ipsam quos at. Illum perferendis omnis laboriosam, obcaecati impedit nostrum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur blanditiis sed eaque, ipsam repellendus modi velit architecto maiores. Quo est eos explicabo vitae, inventore saepe quod distinctio sed autem debitis.
 
   </div>
 
   <script>
     // code here
+    function printEvent (e){
+      console.log(window.scrollY)
+      // window.scrollY = 현재 내가 스크롤 한 높이
+      // window.innerHeight = 현재 내가 보고 있는 화면의 높이
+      // window.body.scrollHeight = 문자 전체 스크롤 높이
+      // 현재까지 스크롤 한 높이 + 내 화면의 높이 > 문서 전체보다 크면 끝
+      if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+        const loremDiv = document.querySelector('div')
+        loremDiv.innerText += '새로운 글자!! \n'
+      }
+    }
+    
+    window.addEventListener('scroll', printEvent)
+
   </script>
 </body>
 </html>
