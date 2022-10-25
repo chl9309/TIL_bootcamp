@@ -10,7 +10,11 @@
   <div></div>
   
   <script>
-    
+    const h1Tag = document.createElement('h1')
+    h1Tag.innerText = 'DOM조작'
+    divTag = document.querySelector('div')
+    divTag.appendChild(h1Tag)
+    // divTag.removeChild(h1Tag)
   </script>
 </body>
 </html>
