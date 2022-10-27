@@ -110,4 +110,24 @@ def profile(request, username):
 @require_POST
 def follow(request, user_pk):
     # CODE HERE
-    pass
+    # 현재 활성화 된 유저 객체 정보 받아오기
+    User = get_user_model()
+    person = get_object_or_404(User, pk=user_pk)
+    me = request.user
+    # 인증을 거친 유저여야지만 follow 가능 (user pk 가 있음)
+    if request.user.is_authenticated:
+        # 본인 팔로우 안 됨
+        if me != person:
+            # 저 사람의 팔로워 목록에 내가 있으면
+            # if me in person.followers.all():
+            # if person.followers.get(pk=me.pk): # get API는 대상이 0일 때도 오류발생
+            # 저 사람의 팔로워 목록에 내가 있으면
+            if person.followers.filter(pk=me.pk).exists():
+                # 이미 팔로우 중인데 또 팔로우 버튼을 눌렀다? = 언팔로우
+                person.followers.remove(me)
+            # 없으면
+            else:
+                # 아직 팔로우를 안했는데 팔로우를 눌렀다? = 팔로우
+                person.followers.add(me)
+            return redirect('accounts:profile', person.username)
+        return redirect('accounts:login')

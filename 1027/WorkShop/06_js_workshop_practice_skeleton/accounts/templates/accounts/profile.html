@@ -46,7 +46,27 @@
 {% endblock content %}
 
 {% block script %}
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <script>
   // CODE HERE
+  const form = document.querySelector('#follow-form')
+
+  form.addEventListener('submit', function (event) {
+    // 원래 form tag가 하던 일은 이제 그만
+    event.prevenDefault()
+
+    // AJAX 요청을 보내기 위해서 axios 사용 할 것이다.
+    // axios로 POST 요청을 보낼 것이다.
+    // axios.post
+    axios({
+      method: 'post',
+      // POST 요청을 /accouts/<user_pk>/follow/ url로 보낼 것이다.
+      url: `/accounts/${person.pk}/follow/`  
+        // 상대경로 앞쪽 localhost:8000은 생략하고 / 로 시작하는 경로
+        // 성공하면 -> 팔로우/언팔로우 글자 바꾸기, 팔로워 수 바꾸기
+        // 팔로우 버튼 선택해서 innerText 혹은 value 변경
+        // 팔로워 수 바꾸기
+    })
+  })
 </script>
 {% endblock script %}
