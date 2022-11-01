@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .complted{
+      color: grey;
+      text-decoration: line-through;
+    }
+    .none {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 0. 상태별 필터링 select -->
+  <select name="" id="">
+    <option value="all">전체</option> 
+    <option value="inProgress">진행 중</option>
+    <option value="completed">완료</option>
+  </select>
+  <!-- 1. 할 일 목록 입력 할 수 있는 input -->
+  <input type="text" name="" id="">
+  <button>+</button>
+  <!-- 2. 할 일 목록이 보일 ul -->
+  <ul>
+    <li v-for="todointosObject">
+      <input type="checkbox">
+      <span>{{ todo.content }}</span>
+    </li>
+  </ul>
+  <!-- 3. 완료 여부 변경 가능한 check box -->
+  <!-- 4. 완료된 일 지우는 button -->
+      <button>완료된 할 일 지우기</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todos: [
+          {
+            content: '워크샵',
+            isCompleted: false,
+            data: new Date().getime()
+          },
+        ]
+      },
+      computed: {
+        todoListByStatus(){
+          // return this.todos.file(todo => )
+        }
+      }
+    })
+
+  </script>
+</body>
+</html>
