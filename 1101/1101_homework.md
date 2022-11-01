@@ -53,6 +53,6 @@
 
 - a = v-for
 
-- b = 
+- b = nums?
 
-- c = 
+- c = oddNumbers?
