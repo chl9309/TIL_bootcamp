@@ -1,24 +1,18 @@
 <template>
   <div id="app">
+    <h1>이곳은 App.vue 입니다</h1>
     <img alt="Vue logo" src="./assets/logo.png">
-    <!-- 3. 보여주기 -->
-    <MyComponent/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="SSAFY 여러분을 응원합니다!"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-// 1. 불러오기
-// import MyComponent from './components/MyComponent.vue'
-import MyComponent from '@/components/MyComponent'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    // 2. 등록하기
-    MyComponent,
+    HelloWorld
   }
 }
 </script>
