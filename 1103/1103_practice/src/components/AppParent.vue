@@ -3,11 +3,11 @@
     <h1> AppParent</h1>
     <input
     type="text"
-    
+    :value="parentdata"
     >
 
-    <p>appData:</p>
-    <p>childData:</p>
+    <p>appData: {{ appData }}</p>
+    <p>childData: {{ childData }}</p>
     
     <AppChild/>
   </div>
@@ -18,9 +18,25 @@ import AppChild from '@/components/AppChild'
 
 export default {
   name: 'AppParent',
+  props:{
+    appData: {
+      type: String
+    },
+    parentData: {
+      type: String
+    },
+  },
+  methods: {
+    onInputChangeData(event) {
+      this.$emit('parent-input-change', event.target.value)
+    },
+    onInputChildData(event) {
+      this.$emit('parent-input-change', event.target.value)
+    }
+  },
   data () {
     return {
-
+     
     }
   },
   components: {

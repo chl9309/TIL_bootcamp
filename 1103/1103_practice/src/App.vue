@@ -3,13 +3,17 @@
     <h1> App </h1>
     <input
     type="text"
-    
+    v-model="appData"
+    @input="onInputChangeData"
     >
 
-    <p>parentData:</p>
-    <p>childData:</p>
+    <p>parentData: {{ parentData }}</p>
+    <p>childData: {{ childData }}</p>
     
-    <AppParent/>
+    <AppParent
+      :app-data="appData"
+      :parent-data="parentData"
+    />
   </div>
 </template>
 
@@ -18,6 +22,13 @@ import AppParent from '@/components/AppParent'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      appData: null,
+      parentData: null,
+      childData: null,
+    }
+  },
   components: {
     AppParent,
   }
