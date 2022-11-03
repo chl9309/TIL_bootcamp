@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import TodoLIstItem from '@/components/TodoListItem'
+import TodoListItem from '@/components/TodoListItem'
 export default {
   name: 'TodoList',
   compoonents: {
-    TodoLIstItem,
+    TodoListItem,
   },
   props: {
     todos: Array,

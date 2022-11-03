@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'TodoLIstItem',
+  name: 'TodoListItem',
   props: {
     todo: Object,
   },
