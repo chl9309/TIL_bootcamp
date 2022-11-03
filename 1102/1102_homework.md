@@ -46,9 +46,9 @@ export default {
 
 - (a) : HelloWorld
 
-- (b) : components
+- (b) : components:
 
-- (c) : methods
+- (c) : methods:
 
 
 3. 다음은 자식 컴포넌트는 부모에서 문자열 데이터가 전달되고 있다. 이 때 부모의 문자열 데이터만 전달 받고 이를 출력하기위해 빈 칸 (a), (b), (c)를 작성하시오.
