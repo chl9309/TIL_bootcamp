@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheLunch v-on:get-menu="getMenu" />
+    <p>App: {{ lunchMenu }}</p>
+    <hr>
+    <TheLotto v-if="lunchMenu" :lunch-menu="lunchMenu"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheLunch from '@/components/TheLunch'
+import TheLotto from '@/components/TheLotto'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheLunch,
+    TheLotto,
+  },
+  data() {
+    return {
+      lunchMenu: null,
+    }
+  },
+  methods: {
+    getMenu(menu) {
+      this.lunchMenu = menu
+    }
   }
 }
 </script>
