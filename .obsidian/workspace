@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "0802/note.md",
+            "file": "test.md",
             "mode": "source",
             "source": false
           }
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ed7aaee8fc6884ab",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0802/note.md",
+                "file": "test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "0802/note.md",
+                "file": "test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0802/note.md"
+                "file": "test.md"
               }
             }
           }
@@ -131,9 +130,9 @@
   },
   "active": "e8d1d1d2a3256856",
   "lastOpenFiles": [
+    "0802/note.md",
     "0805/note.md",
     "youtube_book/Untitled.md",
-    "0802/note.md",
     "0802/Practice/README.md",
     "0804/Practice/README.pdf",
     "youtube_book/python_youtube_book_03.md",
