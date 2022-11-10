@@ -34,13 +34,13 @@ const routes = [
   {
     path:__(b)__
     name: 'about',
-    __(c)__: HomeView
+    __(c)__: AboutView
   },
 
 ]
 ```
 
-- (a) : import AboutView from '@/views/AboutView 
+- (a) : import AboutView from '@/views/AboutView'
 
 - (b) : '/about',
 
