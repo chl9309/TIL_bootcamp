@@ -95,7 +95,7 @@ export default net vuex.Store({
 ## 4. Vue Life Cycle Hook을 참고하여, 다음Vue application을 실행했을때, console 창에 출력되는 메시지를 작성하시오.
 
 
-```vue
+```javascript
 <script>
 export default {
   name: 'HelloWorld',

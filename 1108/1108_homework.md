@@ -55,4 +55,4 @@ __(a)__: {
 ### 3. store에 정의한 state를 직접 변경하지 않고, mutations를 통해 변경해야 하는 이유를 [Vuex 공식문서](https://vuex.vuejs.org/guide/#the-simplest-store)를 참고하여 작성하시오.
 
 
-컨벤션을 지켜 코드 분석하기 한 결 용이하게 하기 위해
+- 컨벤션을 지켜 코드 분석하기 한 결 용이하게 하기 위해
