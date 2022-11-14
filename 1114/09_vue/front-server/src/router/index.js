@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import ArticleView from '@/views/ArticleView'
+import ArticleView from '@/views/ArticleView'
 // import CreateView from '@/views/CreateView'
 // import DetailView from '@/views/DetailView'
 // import SignUpView from '@/views/SignUpView'
@@ -10,11 +10,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'ArticleView',
-  //   component: ArticleView
-  // },
+  {
+    path: '/',
+    name: 'ArticleView',
+    component: ArticleView
+  },
  
   // {
   //   path: '/create',
