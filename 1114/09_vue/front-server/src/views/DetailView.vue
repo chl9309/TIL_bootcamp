@@ -10,13 +10,33 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+const API_URL = 'http://127.0.0.1:8080'
+
 export default {
   name: 'DetailView',
   data() {
+    return {
+
+    }
   },
   created() {
+    this.getArticleDetail()
   },
   methods: {
+    getArticleDetail() {
+      axios({
+        method: 'get',
+        url: `${API_URL}/api/v1/articles/${this.$route.params.id}`
+      })
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
   }
 }
 </script>
