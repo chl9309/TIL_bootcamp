@@ -67,18 +67,17 @@ class SegmentTree:
         return self.get_range_process(self.input_start_index, self.input_end_index, self.tree_index, range_start_index, range_end_index)
 
     def process(self, input_start_index, input_end_index, tree_index):
+        # 1.
         if input_start_index == input_end_index:
             self.result_list[tree_index] = self.input_list[input_start_index]
             return self.result_list[tree_index]
-
+        # 2.
         input_mid_index = (input_start_index + input_end_index) // 2
-
+        # 3.
         left_result = self.process(input_start_index, input_mid_index, tree_index * 2)
-
         right_result = self.process(input_mid_index + 1, input_end_index, tree_index * 2 + 1)
-
+        # 4.
         self.result_list[tree_index] = self.method(left_result, right_result)
-
         return self.result_list[tree_index]
 
     def make(self):

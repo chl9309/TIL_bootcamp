@@ -102,17 +102,19 @@ public class segment_tree_recursive {
         }
 
         public int make(int inputStartIndex, int inputEndIndex, int treeIndex) {
+            
+            // 1.
             if (inputStartIndex == inputEndIndex) {
                 this.resultList[treeIndex] = this.inputList[inputStartIndex];
                 return this.resultList[treeIndex];
             }
-
+            // 2.
             int inputMidIndex = (inputStartIndex + inputEndIndex) / 2;
+            // 3.
             int left_result = this.make(inputStartIndex, inputMidIndex, treeIndex * 2);
             int right_result = this.make(inputMidIndex + 1, inputEndIndex, treeIndex * 2 + 1);
-
+            // 4.
             this.resultList[treeIndex] = this.method(left_result, right_result);
-
             return this.resultList[treeIndex];
         }
 
