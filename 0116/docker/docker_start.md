@@ -16,6 +16,8 @@
 
 
 
+wsl2 를 활용하여 윈도우에서 도커 실행하기
+
 
 
 ```bash
@@ -33,6 +35,10 @@ sudo apt install docker.io
 ```
 docker version
 ```
+
+
+
+도커 엔진 설치
 
 ```
 sudo apt-get update
@@ -53,5 +59,12 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+
+```
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+
+
 
 
