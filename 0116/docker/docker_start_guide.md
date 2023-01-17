@@ -1,26 +1,32 @@
 # SSAFY Docker 설치 가이드 문서
 
-부울경 8기 최홍준
-{: .text-right}
+*부울경 8기 최홍준*
 
 
-## 0. 목차
+## 목차
 
 
 
 
-- 개요
+- [1. 개요](#1-개요)
 
-  - 도커 엔진과 도커 데스크탑의 차이
-
-
-- 시작하기
-
-  - 리눅스 환경에서 도커 엔진 설치하기
-
-  - 
+  - [1.1. 도커 엔진과 도커 데스크탑의 차이](#11-도커-엔진과-도커-데스크탑의-차이)
 
 
+
+- [2. 시작하기](#2-시작하기)
+
+  - [2.1. **리눅스** 환경에서 도커 엔진 설치하기](#21-리눅스-환경에서-도커엔진-설치하기)
+    - [2.1.1. AWS EC2 환경에서 도커 설치하기](#211-aws-ec2-환경에서-도커-설치하기)
+    - [2.1.2. VMware의 리눅스 가상환경에서 설치하기](#212-vmware를-이용한-리눅스-가상환경)
+
+  - [2.2. **윈도우** 환경에서 WSL2을 활용하여 설치하기](#22-윈도우-환경에서-wsl2을-활용하여-설치하기)
+
+- [3. 주요 명령어](#3-주요-명령어)
+
+
+
+------
 
 
 ## 1. 개요
@@ -40,24 +46,85 @@
 도커 엔진은 애플리케이션을 빌드하고 컨테이너화하기 위한 오픈 소스 컨테이너화 기술입니다. 도커 데스크탑은 도커 엔진에 컨테이너, 이미지를 관리 할 수 있는 기능과 이러저러한 편의기능을 덧붙인 프로그램입니다.
 
 
+
+
+
+-----
+
+
+
+
+
 ## 2. 시작하기
 
 
 
 
-### 2.1. 리눅스 환경에서 도커엔진 설치하기
+### 2.1. **리눅스** 환경에서 도커엔진 설치하기
 
 
 #### 2.1.1. AWS EC2 환경에서 도커 설치하기
 
 
 
-이 문서에선 AWS의 EC2 서버에 우분투 CLI 환경을 구성 한 뒤 도커를 설치하였습니다.
+이 문서에선 AWS의 EC2 서버에 우분투 **CLI** 환경을 구성 한 뒤 도커를 설치하였습니다.
+
+먼저 `sudo apt-get update`를 입력하여 패키지 툴을 업데이트 한 뒤 진행합니다.
+
+그리고 다음 명령어를 입력하여 도커 레포지토리를 설치 합니다.
+
+
+```
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+```
+
+```
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+```
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+```
+sudo apt-get update
+```
+
+명령어를 입력하면 다음 이미지와 같이 진행됩니다.
+
+
+![Alt text](cap/Cap%202023-01-17%2017-28-59-443.png)
+
+![Alt text](cap/Cap%202023-01-17%2017-30-06-202.png)
+
+
+`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`를 입력하면 다음 이미지 처럼 도커엔진이 설치됩니다.
+
+![Alt text](cap/Cap%202023-01-17%2017-31-43-660.png)
+
+`doker version`을 입력하면 도커가 설치되어 있다는 것을 확인 할 수 있습니다.
+
+![Alt text](cap/Cap%202023-01-17%2017-35-13-617.png)
+
+`systemctl status docker.service`를 입력하여 도커가 실행 되고 있다는 점을 확인하고 `docker run` 명령어를 이용해 도커 이미지 실행을 해보겠습니다. 예제로 hello-world 이미지를 구동합니다. 결과는 다음 이미지와 같습니다.
+
+
+![Alt text](cap/Cap%202023-01-17%2017-36-26-468.png)
+
+![Alt text](cap/Cap%202023-01-17%2017-37-58-379.png)
 
 
 
 
 
+
+------
 
 
 
@@ -66,16 +133,16 @@
 #### 2.1.2. VMware를 이용한 리눅스 가상환경
 
 
-이 문서에선 VMware에 우분투 gui 환경을 설치하여 도커를 설치 하였습니다.
+이 문서에선 VMware 가상머신에 우분투 **GUI** 환경을 설치하여 도커를 설치 하였습니다.
 
-진행 과정은 2.1.1. 의 과정과 매우 유사합니다.
+진행 과정은 2.1.1. 의 EC2에서의 과정과 매우 유사합니다.
 
 
-리눅스 환경 터미널에서 다음 명령어를 입력합니다.
+리눅스 터미널창에서 다음 명령어를 입력합니다.
 
-`sudo apt-get update`
 
 ```
+sudo apt-get update
 sudo apt-get install \
     ca-certificates \
     curl \
@@ -99,8 +166,10 @@ echo \
 
 그리고 도커 설치를 위해 다음 명령어를 입력합니다.
 
-`sudo apt-get update`
-`sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin`
+```
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
 
 그러면 다음과 같이 설치가 진행됩니다.
 
@@ -124,16 +193,26 @@ echo \
 
 `sudo docker run hello-wolrd`를 입력하여 도커 이미지를 실행을 테스트합니다.
 
+
+
 ![Alt text](cap/Cap%202023-01-17%2014-47-18-038.png)  
 
 
 
 
 
-### 2.2. 윈도우 WSL2을 활용하여 설치하기
+
+-------
 
 
-도커는 리눅스 환경에서 동작하기 때문에 윈도우 하위 리눅스 시스템인 WSL2에 설치할 수 있습니다. WSL2 환경 셋팅이 되어있다는 전제하에 진행하겠습니다.
+
+
+
+### 2.2. **윈도우** 환경에서 WSL2을 활용하여 설치하기
+
+
+
+도커는 리눅스 환경에서 동작하기 때문에 윈도우 하위 리눅스 시스템인 WSL2를 활용하여 설치할 수 있습니다. WSL2 환경 셋팅이 되어있다는 전제하에 진행하겠습니다.
 이 문서에선 우분투 22.04.1 LTS 버전을 선택하여 진행하겠습니다.
 
 
@@ -142,7 +221,10 @@ echo \
 
 
 
-윈도우 환경에서 도커 데스크탑 [다운로드](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) 합니다.
+
+
+다음은 윈도우 환경에서 도커 데스크탑을 [다운로드](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) 합니다.
+
 
 설치 도중 WSL2 기반 엔진 사용 확인란을 선택하고 설치를 진행합니다.
 
@@ -161,8 +243,9 @@ echo \
 ![Alt text](cap/Cap%202023-01-16%2014-44-17-034.png)
 
 
+
 > 주의!
-> 도커 데스크탑은 Hyper-V 가상환경을 사용하기 때문에 VMware나 VirtualBox이 같이 사용되지 않습니다.
+> 도커 데스크탑은 Hyper-V 가상환경을 사용하기 때문에 VMware나 VirtualBox가 같이 사용되지 않습니다.
 
 
 
@@ -177,6 +260,15 @@ echo \
 
 
 ![Alt text](cap/Cap%202023-01-16%2017-37-33-348.png)
+
+
+
+
+
+
+
+
+-------
 
 
 
